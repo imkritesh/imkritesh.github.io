@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kritesh's Coffee Blog - Recipes and Brewing Tips" />
+  <title>Kritesh's Coffee Blog</title>
+  <link rel="stylesheet" href="./coffee_style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div>
+      <h1>Kritesh's Coffee Blog</h1>
+      <p>☕</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Welcome!</h2>
+      <p>
+        This is where I document my favorite coffee recipes and brewing experiments. I primarily brew using Hario v60 and Aeropress.
+      </p>
+    </section>
+
+    <section class="recipes-list">
+      <h2>Recipes</h2>
+      <ul>
+        <li><a href="#" onclick="showCard('dirty')">Dirty Coffee</a></li>
+        <li><a href="#" onclick="showCard('iced_v60')">Japanese Iced V60</a></li>
+      </ul>
+    </section>
+    <div id="dirty" class="recipe-card hidden">
+        <div class="recipe-card-content">
+        <h2>Dirty Coffee</h2>
+        <p>A bold contrast of hot espresso over cold milk.</p>
+        <ul>
+            <li>Mix 200 ml of cold milk with 30 ml of condensed milk.</li>
+            <li>Keep the mixture in freezer for 15 minutes.</li>
+            <li>Use dark roast coffee to pull psuedo espresso shot using Aeropress (18 gm coffee brewed with 60 gm water).</li>
+            <li>Gently layer hot espresso on top of cold milk. Enjoy the contrast. </li>
+            <img src="./dirty-coffee.jpeg" class="recipe-image" alt="Dirty Coffee">
+        </ul>
+        <button onclick="hideCard('dirty')">Close</button>
+        </div>
+    
+    </div>
+        <div id="iced_v60" class="recipe-card hidden">
+        <div class="recipe-card-content">
+        <h2>Japanese Iced Coffee</h2>
+        <!-- <p>A bold contrast of hot espresso over cold milk.</p> -->
+        <ul>
+            <li>Use a coffee-to-water ratio of 1:16.</li>
+            <li>Grind the beans slightly finer than your usual V60 grind, as we’ll be using less water (Timemore C2: 18–22 clicks).</li>
+            <li>Place 40% of the total water as ice in the carafe.</li>
+            <li>Pour the remaining 60% as hot water over the coffee to brew directly onto the ice.</li>
+            <!-- <img src="./dirty-coffee.jpeg" class="recipe-image" alt="Dirty Coffee"> -->
+        </ul>
+        <button onclick="hideCard('iced_v60')">Close</button>
+        </div>
+    </div>
+
+
+    <!-- <div id="v60" class="recipe-card hidden">
+      <h3>Japanese Iced V60</h3>
+      <p>A refreshing pour-over brewed directly over ice.</p>
+      <ul>
+        <li>15g coffee (medium grind)</li>
+        <li>90g ice in server, 150g hot water</li>
+      </ul>
+      <p><strong>Steps:</strong> Add ice to the carafe, bloom coffee, then slowly pour rest of water. Swirl and serve.</p>
+      <button onclick="hideCard('v60')">Close</button>
+    </div>
+  </main> -->
+
+  <!-- <footer>
+    <div class="container">
+      <p>&copy; 2025 Kritesh Semwal • Brew. Taste. Repeat.</p>
+    </div>
+  </footer> -->
+
+  <script>
+    function showCard(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function hideCard(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>

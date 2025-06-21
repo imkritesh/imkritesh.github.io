@@ -1,0 +1,139 @@
+/* Typography */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #faf7f2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #3e2f1c;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  opacity: 0.5;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+/* Layout */
+
+.main-header {
+  background-image: url('./latte-art-basic.jpeg');
+  background-size: 28% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Section Styling */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #3e2f1c;
+}
+
+.intro p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.recipes-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipes-list li {
+  margin: 0.8rem 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.recipe-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.recipe-card-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInScale 0.3s ease-in-out;
+  position: relative;
+}
+
+.recipe-card-content h3 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  color: #3e2f1c;
+}
+
+.recipe-card-content button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #6f4e37;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.recipe-card-content button:hover {
+  background: #523926;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.recipe-image {
+  display: block;
+  max-width: 200px;     /* Adjust size as needed */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  object-fit: contain;
+}
