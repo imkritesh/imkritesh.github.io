@@ -81,6 +81,7 @@ h2 {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  overflow-y: auto;
 }
 
 .recipe-card-content {
@@ -101,9 +102,7 @@ h2 {
 }
 
 .recipe-card-content button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: relative;
   background: #6f4e37;
   color: white;
   border: none;
